@@ -1,0 +1,39 @@
+@layer die {
+  .die {
+    translate: -3em -3em;
+    transform-origin: 3em 3em;
+    transform: rotateX(-30deg) rotateY(-45deg);
+
+    scale: 2;
+  }
+
+  .face {
+    min-width: 6em;
+    min-height: 6em;
+  }
+
+  .face:nth-child(1) {
+    transform: translateZ(3em);
+  }
+
+  .face:nth-child(2) {
+    transform: rotateY(90deg) translateZ(3em);
+  }
+
+  .face:nth-child(3) {
+    transform: rotateX(90deg) translateZ(3em);
+  }
+
+  .face:nth-child(4) {
+    transform: rotateX(-90deg) translateZ(3em);
+  }
+
+  .face:nth-child(5) {
+    transform: rotateY(-90deg) translateZ(3em);
+  }
+
+  .face:nth-child(6) {
+    transform: rotateY(180deg) translateZ(3em);
+    text-decoration: underline;
+  }
+}

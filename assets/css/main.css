@@ -1,0 +1,52 @@
+@layer reset, base, die;
+
+@layer reset {
+  * {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+  }
+
+  :root {
+    font-size: 1em;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    user-select: none;
+    color: #dadada;
+  }
+}
+
+@layer base {
+  body {
+    min-width: 100vw;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+
+    background: #252525;
+  }
+}
+
+@layer die {
+  .die {
+    perspective: none;
+    transform-style: preserve-3d;
+
+    transition-duration: 3s;
+    transition-timing-function: cubic-bezier(0.25, 0.7, 0.6, 1);
+  }
+
+  .face {
+    position: absolute;
+    display: flex;
+    place-content: center;
+    place-items: center;
+
+    box-sizing: border-box;
+    border: 2px solid #dadada;
+    background: #252525;
+  }
+}
